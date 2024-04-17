@@ -1,0 +1,82 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.header{
+    min-height: 100vh;
+    width: 100%;
+    /* background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7),url(bg.jpg)); */
+    background-image: linear-gradient(rgba(4,15,5,0.6),rgba(4,15,5,0.6)),url("https://cdn.pixabay.com/photo/2016/11/21/17/29/agriculture-1846649_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+h1{
+    font-size: 40px;
+    color: white;
+}
+nav{
+    display: flex;
+    padding: 2% 4%;
+    justify-content: space-between;
+    align-content: center;
+}
+.nav_link{
+    flex: 1;
+    text-align: right;
+}
+.nav_link ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 10px;
+    position: relative;
+    text-decoration: none;
+}
+.nav_link ul a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+.nav_link ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #4aea6c;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav_link ul li:hover::after{
+    width: 100%;
+}
+.text-box{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size: 50px;
+      
+}
+.nav_link ul a i{
+    margin-left: 10px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 24px;
+    color: #fff;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(rgba(4, 10,5,0.4),rgba(2,10,5,0.4)),url("https://cdn.pixabay.com/photo/2017/04/11/03/41/tea-plantation-2220475_960_720.jpg");
+    /* text-align: center; */
+    background-size: cover;
+    text-align: center;
+}
+
+.form-container {
+    margin-top: 20%;
+    margin-left: 35%;
+    max-width: 400px;
+    max-height: 500px;
+    /* margin: 50px auto; */
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: 30%;
+    margin-bottom: 10px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+.login{
+    margin-top: 15%;
+}
+button {
+    width: 100%;
+    padding: 8px;
+    background-color: #0a52a0;
+    color: #4115b1;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    background-color: rgb(12, 11, 11);
+}
+h1{
+    /* text-align: center; */
+    color: black;
+}

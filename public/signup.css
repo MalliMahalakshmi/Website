@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: linear-gradient(rgba(4,15,5,0.6),rgba(4,15,5,0.6)),url("https://cdn.pixabay.com/photo/2020/05/31/04/36/investment-5241253_1280.jpg");
+    background-size: cover;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    margin-top: 12%;
+    font-size: 65px;
+    color: white;
+}
+.action{
+    border: 2px solid;
+    border-radius: 15px;
+    border-color: black;
+    color: black;
+    background-color: white;
+    font-size: 35px;
+    padding: 10px;
+    text-decoration: none;
+    width: 200px;
+}
+.home{
+    margin-top: 60px;
+    font-size: 35px;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    box-shadow: 0 0 10px 0px rgba(249, 247, 247, 0.6);
+    text-decoration: underline;
+}
