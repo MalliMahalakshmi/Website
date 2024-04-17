@@ -1,24 +1,30 @@
-const express = require("express")
-const path = require("path")
-const app = express()
-const hbs = require("hbs")
-const LogInCollection = require("./mongod")
-const port = process.env.PORT || 3000
-app.use(express.json())
+const express = require("express");
+const path = require("path");
+const mongoose = require("mongoose");
+const bcrypt = require('bcrypt');
+require("dotenv").config(); // Load environment variables from .env file
 
-app.use(express.urlencoded({ extended: false }))
+const app = express();
+const hbs = require("hbs");
+const LogInCollection = require("./mongod");
+const port = process.env.PORT || 3000;
 
-const TemplatesPath = path.join(__dirname, '../Templates')
-const publicPath = path.join(__dirname, '../public')
-console.log(publicPath);
-
-app.set('view engine', 'hbs')
-app.set('views', TemplatesPath)
-app.use(express.static(publicPath))
+// Connect to MongoDB using mongoose
+const mongodbUri = process.env.MONGODB_URI || "mongodb://localhost:27017";
+mongoose.connect(mongodbUri, { })
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.error('MongoDB connection error:', err));
 
 
-// hbs.registerPartials(partialPath)
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
+const TemplatesPath = path.join(__dirname, '../Templates');
+const publicPath = path.join(__dirname, '../public');
+
+app.set('view engine', 'hbs');
+app.set('views', TemplatesPath);
+app.use(express.static(publicPath));
 
 app.get('/signup', (req, res) => {
     res.render('signup')
@@ -42,7 +48,7 @@ app.get('/Community', (req, res) => {
     res.render('Community')
 })
 
-const bcrypt = require('bcrypt');
+// Routes...
 
 // Signup route
 app.post('/signup', async (req, res) => {
@@ -96,8 +102,6 @@ app.post('/login', async (req, res) => {
     }
 });
 
-
-
 app.listen(port, () => {
-    console.log('port connected');
-})
+    console.log('Server is running on port ' + port);
+});

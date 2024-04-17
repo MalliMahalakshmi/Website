@@ -1,44 +1,32 @@
-const express = require("express")
-const serverless = require('serverless-http');
-const path = require("path")
-const app = express()
-const hbs = require("hbs")
-const LogInCollection = require("./mongod")
-const port = process.env.PORT || 3000
-app.use(express.json())
-
-app.use(express.urlencoded({ extended: false }))
-
-const TemplatesPath = path.join(__dirname, '../Templates')
-const publicPath = path.join(__dirname, '../public')
-console.log(publicPath);
-
-app.set('view engine', 'hbs')
-app.set('views', TemplatesPath)
-app.use(express.static(publicPath))
-
-app.get('/signup', (req, res) => {
-    res.render('signup')
-})
-app.get('/login', (req, res) => {
-    res.render('login')
-})
-app.get('/home', (req, res) => {
-    res.render('home')
-})
-app.get('/plant', (req, res) => {
-    res.render('plant')
-})
-app.get('/resources', (req, res) => {
-    res.render('resources')
-})
-app.get('/Tools', (req, res) => {
-    res.render('Tools')
-})
-app.get('/Community', (req, res) => {
-    res.render('Community')
-})
+const express = require("express");
+const path = require("path");
+const mongoose = require("mongoose");
 const bcrypt = require('bcrypt');
+require("dotenv").config(); // Load environment variables from .env file
+
+const app = express();
+const hbs = require("hbs");
+const LogInCollection = require("./mongod");
+const port = process.env.PORT || 3000;
+
+// Connect to MongoDB using mongoose
+const mongodbUri = process.env.MONGODB_URI || "mongodb://localhost:27017";
+mongoose.connect(mongodbUri, { })
+    .then(() => console.log('MongoDB connected'))
+    .catch(err => console.error('MongoDB connection error:', err));
+
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
+const TemplatesPath = path.join(__dirname, '../Templates');
+const publicPath = path.join(__dirname, '../public');
+
+app.set('view engine', 'hbs');
+app.set('views', TemplatesPath);
+app.use(express.static(publicPath));
+
+// Routes...
 
 // Signup route
 app.post('/signup', async (req, res) => {
@@ -92,10 +80,6 @@ app.post('/login', async (req, res) => {
     }
 });
 
-app.use(express.static(path.join(__dirname, 'dist')));
-app.use('/.netlify/DemoApp/src/app', router);
-module.exports.handler=serverless(app);
-
 app.listen(port, () => {
-    console.log('port connected');
-})
+    console.log('Server is running on port ' + port);
+});
