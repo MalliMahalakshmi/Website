@@ -10,7 +10,7 @@ const LogInCollection = require("./mongod");
 const port = process.env.PORT || 3000;
 
 // Connect to MongoDB using mongoose
-const mongodbUri = process.env.MONGODB_URI || "mongodb://localhost:27017";
+const mongodbUri = process.env.MONGODB_URI || "mongodb+srv://mallimahalakshmi13:bbhO3YXKKxcki7cI@cluster0.nlxymi8.mongodb.net/mywebsite";
 mongoose.connect(mongodbUri, { })
     .then(() => console.log('MongoDB connected'))
     .catch(err => console.error('MongoDB connection error:', err));
