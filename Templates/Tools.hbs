@@ -1,38 +1,86 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-     <title>GreenThumb</title> 
-     <link rel="stylesheet" href="Tools.css"> 
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> 
-    </head> 
-    <body> 
-        <section class="header">
-            <nav>
-                <h1>GREENTHUMB</h1>
-                <div class="nav_link">
-                    <ul>
-                        <li><a  href="home">Home</a></li>
-                        <li><a  href="plant">Plant Database</a></li>
-                        <li><a href="resources">Learning Resources</a></li>
-                        <li><a href="Tools">Interactive Tools</a></li>
-                        <li><a href="Community">Community Interaction</a></li>
-                        <li><a href="/">Logout<i class="fa-solid fa-user"></i></a></li>
-                    </ul>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenThumb</title>
+    <link rel="stylesheet" href="Tools.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <h1>GREENTHUMB</h1>
+            <!-- <div class="fas fa-bars"></div> -->
+            <div class="nav_link">
+                <ul>
+                <li><a href="home">Home</a></li>
+                <li><a href="plant">Plant database</a></li>
+                <li><a href="resources">Learning Resources</a></li>
+                <li><a href="Tool">Interactive Tools</a></li>
+                <li><a href="Community">Community Interaction</a></li>
+                <li><a href="/">Logout<i class="fa-solid fa-user"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <section class="tool">
+        <div class="container">
+            <h1 class="section-title"> Some commonly used Tools</h1><br>
+            <div class="content">
+                <div class="media">
+                    <li class="t1">Hand Trowel</li>
+                    <li class="t2">Garden Fork</li>
+                    <li class="t3">Pruning Shears</li>
+                    <li class="t4">Garden Spade</li>
+                    <li class="t5">Garden Hoe</li>
                 </div>
-                         </nav>
-                          <div class="text-box">
-                             <h1>Interactive Tools</h1> 
-                             <p>To identify Plant : <a href="https://www.plant.id/">click here</a></p>
-                              <p>Garden Planner : <a href="https://planner5d.com/use/garden-planner">click here</a></p> 
-                              <p>Plant Care : <a href="https://www.apartmenttherapy.com/best-free-plant-care-apps-37365735">click here</a></p> 
-                              <p>Plant Simulator : <a href="https://academic.oup.com/aob/article/101/8/1125/160295">click here</a></p>
-                               <p>Plant Growth Tracker : <a href="https://www.yeschat.ai/gpts-2OToSlr6Q7-%F0%9F%8C%B1-BotanyBasis-Plant-Growth-Tracker-%F0%9F%93%88">click here</a></p>
-                          </div>
-        </section>
-    <footer class="footer"> 
-        <p>© 2024 GreenThumb. All rights reserved.</p> 
-    </footer> 
-    </body> 
-</html> 
+                <div class="image">
+                    <img src="https://cdn.pixabay.com/photo/2019/05/24/18/01/planting-4226838_1280.jpg" alt="Tools">
+                </div>
+                <div class="media1">
+                <li class="t6">Garden Rake</li>
+                <li class="t7">Watering Can</li>
+                <li class="t8">Garden Gloves</li>
+                <li class="t9">Wheelbarrow</li>
+                <li class="t0">Garden Prune</li>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div class="tool1">
+                <h1>AI Generated Tools for Gardening</h1>
+                <div class="ai">
+                    <li>Smart Plant Identification Apps</li>
+                    <li>Automated Garden Monitoring Systems</li>
+                    <li>Personalized Garden Planning Software</li>
+                    <li>Virtual Garden Design Platforms</li>
+                    <li>Plant Disease Prediction Models</li>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p class="copyright"> 2024 GreenThumb | All Rights Reserved.</p>
+    </footer>
+    <script>
+        ScrollReveal({
+             reset: true ,
+             distance:'60px',
+             duration: 2500,
+             delay: 400
+            });
+            ScrollReveal().reveal('.media1', { delay: 400 ,origin:"right"});
+            ScrollReveal().reveal('.media', { delay: 400 ,origin:"left"})
+    </script>
+</body>
+</html>
