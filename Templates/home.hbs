@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>GreenThumb</title>
-        <link rel="stylesheet" href="home.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    </head>
-    <body>
-        <section class="header">
-            <nav>
-                <h1>GREENTHUMB</h1>
-                <div class="nav_link">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenThumb</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <h1>GREENTHUMB</h1>
+            <!-- <div class="fas fa-bars"></div> -->
+            <div class="nav_link">
                 <ul>
-                    <li><a  href="home">Home</a></li>
-                    <li><a  href="plant">Plant Database</a></li>
-                    <li><a href="resources">Learning Resources</a></li>
-                    <li><a href="Tools">Interactive Tools</a></li>
-                    <li><a href="Community">Community Interaction</a></li>
-                    <li><a href="/">Logout<i class="fa-solid fa-user"></i></a></li>
+                <li><a href="home">Home</a></li>
+                <li><a href="plant">Plant database</a></li>
+                <li><a href="resources">Learning Resources</a></li>
+                <li><a href="Tools">Interactive Tools</a></li>
+                <li><a href="Community">Community Interaction</a></li>
+                <li><a href="/">Logout<i class="fa-solid fa-user"></i></a></li>
                 </ul>
             </div>
         </nav>
@@ -26,9 +28,58 @@
             <h1>Welcome To GreenThumb</h1>
             <p>"Cultivating greenery, nurturing knowledge"</p>
         </div>
-        </section>
-        <footer>
-            <p>&copy; 2024 GreenThumb. All rights reserved.</p>
-        </footer>
-    </body>
-    </html>
+    </section>
+    <section class="about">
+        <img src="https://img.freepik.com/free-vector/hand-drawn-people-planting-tree-illustration_23-2149214943.jpg?t=st=1714384251~exp=1714387851~hmac=b69e8a11d43d037468846aa5c475cf8b8ae52bc8e36899b9bd53841b0dcb0c37&w=740">
+        <div class="content">
+            <h1>About Us</h1>
+            <h4>Welcome to GreenThumb, your go-to destination for all things related to gardening, sustainability, and green living.</h4><br>
+            <p>At GreenThumb, we're on a mission to inspire and empower individuals to cultivate green spaces, adopt sustainable practices, and foster a deeper connection with nature. We believe that through gardening and embracing sustainable living, we can make a positive impact on our planet and create healthier, happier communities.</p>
+            <button class="read-more"><a href="home.html">Read More</a></button>
+        </div>
+    </section>
+    <section class="offer">
+        <h1>What we Offer</h1>
+        <ul class="offers">
+            <li><i class="fa-solid fa-arrow-right"></i>  Expert gardening advice and tips for enthusiasts of all skill levels, from beginners to seasoned green thumbs.</li>
+            <li><i class="fa-solid fa-arrow-right"></i>  Resources and guides on sustainable gardening practices, including composting, water conservation, organic gardening, and permaculture techniques.</li>
+            <li><i class="fa-solid fa-arrow-right"></i>  Inspiration for designing and creating beautiful, thriving gardens, whether you have a spacious backyard or a tiny urban balcony.</li>
+            <li><i class="fa-solid fa-arrow-right"></i>  Community forums and discussion boards where you can connect with fellow gardeners, share experiences, ask questions, and exchange ideas.</li>
+            <li><i class="fa-solid fa-arrow-right"></i>  Educational content on environmental conservation, biodiversity, the importance of green spaces, and how gardening can contribute to a more sustainable future.</li>
+        </ul>
+    </section>
+    <!-- contact-us section -->
+    <section class="contact-form">
+        <h2 class="contact-me">Contact Us</h2>
+        <form action="#">
+            <div class="input-box">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email">
+                <input type="number" placeholder="Phone number">
+            </div>
+            <textarea name="" id="" cols="30" rows="10" placeholder="your message"></textarea>
+            <input type="submit" value="Send Message" class="btn-1">
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="social">
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <p class="copyright"> 2024 GreenThumb | All Rights Reserved.</p>
+    </footer>
+    <script>
+        ScrollReveal({
+             reset: true ,
+             distance:'60px',
+             duration: 2500,
+             delay: 400
+            });
+            ScrollReveal().reveal('.text-box,.about,.contact-form', { delay: 600 });
+            ScrollReveal().reveal('.content,.offer', { delay: 600,origin: 'left' });
+            ScrollReveal().reveal('.offers', { delay: 600 });
+    </script>
+</body>
+</html>
