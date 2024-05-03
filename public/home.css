@@ -68,6 +68,7 @@ nav{
 .text-box p{
     color: white;
     font-size: 25px;
+    padding-top: 0;
 }
 .nav_link ul a i{
     margin-left: 10px;
@@ -89,6 +90,10 @@ nav{
 .about h1{
     color: rgb(240, 108, 108);
     padding: 10px;
+}
+.about h4{
+    font-size:20px;
+
 }
 .about img{
     flex: 0 50%;
