@@ -4,8 +4,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>GreenThumb</title>
-        <link rel="stylesheet" href="Community.css">
+        <link rel="stylesheet" href="demo.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+        <script src="https://unpkg.com/scrollreveal"></script>
     </head>
     <body>
         <section class="header">
@@ -22,15 +23,16 @@
                 </ul>
             </div>
         </nav>
-        <div class="text-box">
-            <h1>COMMUNITY GROUPS</h1><br>
-            <ul>
-                <li>Dave's Community : <a href="https://davesgarden.com/community/">Click here</a></li>
-                <li>GardenWeb's Community : <a href="https://www.gardenweb.com/discussions/query/community">Click here</a></li>
-                <li>Gardener's Community : <a href="https://www.gardeners.com/search?q=community">Click here</a></li>
-            </ul>
-        </div>
-        <footer class="footer">
+    </section>
+    <section class="offer">
+        <h1>Community Groups</h1>
+        <ul>
+            <li class="offer1">Dave's Community : <a href="https://davesgarden.com/community/">Click here</a></li>
+            <li class="offer1">GardenWeb's Community : <a href="https://www.gardenweb.com/discussions/query/community">Click here</a></li>
+            <li class="offer1">Gardener's Community : <a href="https://www.gardeners.com/search?q=community">Click here</a></li>
+        </ul>
+    </section>
+    <footer class="footer">
         <div class="social">
             <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
@@ -38,6 +40,15 @@
             <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
         </div>
         <p class="copyright"> 2024 GreenThumb | All Rights Reserved.</p>
-    </footer>
-    </body>
-    </html>
+    </footer>
+    <script>
+        ScrollReveal({
+             reset: true ,
+             distance:'60px',
+             duration: 2500,
+             delay: 400
+            });
+            ScrollReveal().reveal('.offer1', { delay: 400 });
+    </script>
+</body>
+</html>
